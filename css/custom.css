@@ -175,217 +175,6 @@
 .carousel-dark .carousel-caption {
   color: #000; }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0; }
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth; }
-
-a {
-  text-decoration: none;
-  color: #000; }
-
-p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem; }
-
-.imgCover {
-  width: 100%;
-  object-fit: cover;
-  background-size: cover;
-  object-position: center center; }
-
-.contenedorAncho {
-  width: 95%;
-  max-width: 110rem;
-  margin: 0 auto; }
-
-.navegacion {
-  width: 100%;
-  background-color: #fff;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  position: fixed; }
-  .navegacion .menuHamburguesa {
-    display: none; }
-  .navegacion .navegacionAncho {
-    height: 10rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-  .navegacion .navegacionLogo img {
-    height: 8rem; }
-  .navegacion .navegacionEnlaces {
-    display: flex;
-    width: 43rem;
-    justify-content: space-between; }
-    .navegacion .navegacionEnlaces a {
-      font-weight: 500;
-      font-size: 1.8rem;
-      font-family: "Roboto", sans-serif;
-      color: #8B8B8B;
-      position: relative;
-      padding: 1rem 0; }
-    .navegacion .navegacionEnlaces a:hover:after, .navegacion .navegacionEnlaces .sectorActivo:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 4.2rem;
-      height: 0.2rem;
-      background-color: #3D7A5D; }
-    .navegacion .navegacionEnlaces a:hover, .navegacion .navegacionEnlaces .sectorActivo {
-      color: #3D7A5D; }
-
-.bootstrapCarousel {
-  position: relative;
-  margin-top: 10rem; }
-  .bootstrapCarousel .imgCarousel {
-    height: 92.5vh; }
-  .bootstrapCarousel .tituloPresentacion {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    max-width: 83rem; }
-    .bootstrapCarousel .tituloPresentacion h1 {
-      font-family: 'Roboto', sans-serif;
-      text-align: center;
-      font-weight: 700;
-      color: #fff;
-      font-size: 7.2rem;
-      letter-spacing: 0.43px;
-      line-height: 1;
-      margin: 0; }
-    .bootstrapCarousel .tituloPresentacion p {
-      font-size: 1.8rem;
-      font-weight: 500;
-      color: #fff;
-      text-align: center;
-      padding-top: 2rem; }
-
-@media (max-width: 900px) {
-  .navegacion .navegacionEnlaces {
-    visibility: hidden;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    transform: translateX(100%);
-    transition: .4s;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.932); }
-    .navegacion .navegacionEnlaces a {
-      padding: 2rem 0; }
-  .navegacion .menuOpen {
-    visibility: visible;
-    transform: translateX(0%); }
-  .navegacion .menuHamburguesa {
-    display: inline-block;
-    cursor: pointer;
-    transition: 0.2s; }
-    .navegacion .menuHamburguesa img {
-      width: 5rem; }
-  .navegacion .leftMenu {
-    transform: translateX(-100%);
-    transition: 0.5s; } }
-
-@media (max-width: 720px) {
-  .bootstrapCarousel .tituloPresentacion h1 {
-    font-size: 4rem; } }
-
-.relativeId {
-  position: relative; }
-  .relativeId #nosotros {
-    position: absolute;
-    top: -5%;
-    left: 0;
-    opacity: 0; }
-
-.nosotros {
-  padding: 4.5rem 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  column-gap: 11.5rem;
-  row-gap: 5rem; }
-  .nosotros .tituloNosotros {
-    font-weight: 700;
-    font-family: "Roboto", sans-serif;
-    font-size: 5.1rem;
-    display: inline-block;
-    position: relative;
-    padding: 1.5rem 0; }
-    .nosotros .tituloNosotros:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 15rem;
-      height: 0.2rem;
-      background-color: #3D7A5D; }
-  .nosotros .textoNosotros {
-    font-family: 'Source Serif Pro', serif;
-    color: #737373;
-    line-height: 2.6rem;
-    padding: 4rem 0; }
-  .nosotros .posBoton {
-    margin: 0 7rem; }
-  .nosotros .nosotrosImg {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2.4rem;
-    row-gap: 2.4rem; }
-    .nosotros .nosotrosImg .imgCover {
-      height: 20rem; }
-    .nosotros .nosotrosImg .imgCover:last-child {
-      grid-column: 1/3; }
-
-@media (max-width: 1050px) {
-  .nosotros {
-    column-gap: 2rem; } }
-
-@media (max-width: 720px) {
-  .nosotros {
-    margin: 0 auto;
-    grid-template-columns: 1fr; }
-    .nosotros .infoNosotros {
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-    .nosotros .tituloNosotros {
-      text-align: center; } }
-
-@media (max-width: 420px) {
-  .nosotros {
-    display: block; }
-    .nosotros .nosotrosImg {
-      column-gap: 0.5rem;
-      row-gap: 1rem;
-      margin-top: 5rem; }
-    .nosotros .nosotros {
-      width: 100%; } }
-
-.boton {
-  border: none;
-  background-color: #3D7A5D;
-  color: #fff;
-  padding: 1.5rem 5rem;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.6rem;
-  letter-spacing: 0.64px;
-  margin: 0 auto; }
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -690,3 +479,282 @@ template {
    */
 [hidden] {
   display: none; }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem; }
+
+.imgCover {
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+  object-position: center center; }
+
+.contenedorAncho {
+  width: 95%;
+  max-width: 110rem;
+  margin: 0 auto; }
+
+.navegacion {
+  width: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  position: fixed; }
+  .navegacion .menuHamburguesa {
+    display: none; }
+  .navegacion .navegacionAncho {
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .navegacion .navegacionLogo img {
+    height: 8rem; }
+  .navegacion .navegacionEnlaces {
+    display: flex;
+    width: 43rem;
+    justify-content: space-between; }
+    .navegacion .navegacionEnlaces a {
+      font-weight: 500;
+      font-size: 1.8rem;
+      font-family: "Roboto", sans-serif;
+      color: #8B8B8B;
+      position: relative;
+      padding: 1rem 0; }
+    .navegacion .navegacionEnlaces a:hover:after, .navegacion .navegacionEnlaces .sectorActivo:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 4.2rem;
+      height: 0.2rem;
+      background-color: #3D7A5D; }
+    .navegacion .navegacionEnlaces a:hover, .navegacion .navegacionEnlaces .sectorActivo {
+      color: #3D7A5D; }
+
+.bootstrapCarousel {
+  position: relative;
+  margin-top: 10rem; }
+  .bootstrapCarousel .imgCarousel {
+    height: 92.5vh; }
+  .bootstrapCarousel .tituloPresentacion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 83rem; }
+    .bootstrapCarousel .tituloPresentacion h1 {
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      font-weight: 700;
+      color: #fff;
+      font-size: 7.2rem;
+      letter-spacing: 0.43px;
+      line-height: 1;
+      margin: 0; }
+    .bootstrapCarousel .tituloPresentacion p {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #fff;
+      text-align: center;
+      padding-top: 2rem; }
+
+@media (max-width: 900px) {
+  .navegacion .navegacionEnlaces {
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: .4s;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.932); }
+    .navegacion .navegacionEnlaces a {
+      padding: 2rem 0; }
+  .navegacion .menuOpen {
+    visibility: visible;
+    transform: translateX(0%); }
+  .navegacion .menuHamburguesa {
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.2s; }
+    .navegacion .menuHamburguesa img {
+      width: 5rem; }
+  .navegacion .leftMenu {
+    transform: translateX(-100%);
+    transition: 0.5s; } }
+
+@media (max-width: 720px) {
+  .bootstrapCarousel .tituloPresentacion h1 {
+    font-size: 4rem; } }
+
+.relativeId {
+  position: relative; }
+  .relativeId #nosotros {
+    position: absolute;
+    top: -5%;
+    left: 0;
+    opacity: 0; }
+
+.nosotros {
+  padding: 4.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 11.5rem;
+  row-gap: 5rem; }
+  .nosotros .tituloNosotros {
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    font-size: 5.1rem;
+    display: inline-block;
+    position: relative;
+    padding: 1.5rem 0; }
+    .nosotros .tituloNosotros:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 15rem;
+      height: 0.2rem;
+      background-color: #3D7A5D; }
+  .nosotros .textoNosotros {
+    font-family: 'Source Serif Pro', serif;
+    color: #737373;
+    line-height: 2.6rem;
+    padding: 4rem 0; }
+  .nosotros .posBoton {
+    margin: 0 7rem; }
+  .nosotros .nosotrosImg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.4rem;
+    row-gap: 2.4rem; }
+    .nosotros .nosotrosImg .imgCover {
+      height: 20rem; }
+    .nosotros .nosotrosImg .imgCover:last-child {
+      grid-column: 1/3; }
+
+@media (max-width: 1050px) {
+  .nosotros {
+    column-gap: 2rem; } }
+
+@media (max-width: 720px) {
+  .nosotros {
+    margin: 0 auto;
+    grid-template-columns: 1fr; }
+    .nosotros .infoNosotros {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .nosotros .tituloNosotros {
+      text-align: center; } }
+
+@media (max-width: 420px) {
+  .nosotros {
+    display: block; }
+    .nosotros .tituloNosotros {
+      font-size: 4rem; }
+    .nosotros .nosotrosImg {
+      column-gap: 0.5rem;
+      row-gap: 1rem;
+      margin-top: 5rem; }
+    .nosotros .nosotros {
+      width: 100%; } }
+
+.boton {
+  border: none;
+  background-color: #3D7A5D;
+  color: #fff;
+  padding: 1.5rem 5rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.64px;
+  margin: 0 auto; }
+
+.seccionServicios {
+  width: 100%;
+  background-color: #d0d0d0; }
+  .seccionServicios .serviciosGrupo {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 5rem;
+    margin-top: 7rem; }
+    .seccionServicios .serviciosGrupo .filaServicios {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .seccionServicios .serviciosGrupo .filaServicios p {
+        font-weight: 500;
+        font-size: 1.8rem;
+        color: #3E3E3E;
+        padding-top: 3rem;
+        text-align: center; }
+  .seccionServicios .serviciosContenido {
+    padding: 10rem 0; }
+  .seccionServicios h2 {
+    font-size: 5.1rem;
+    font-weight: 700;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    position: relative; }
+    .seccionServicios h2:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 15rem;
+      height: 0.2rem;
+      background-color: #3D7A5D;
+      bottom: -2rem; }
+  .seccionServicios .redondoServicio {
+    background-color: #fff;
+    width: 13.5rem;
+    height: 13.5rem;
+    border-radius: 50%;
+    position: relative; }
+    .seccionServicios .redondoServicio .svgServicios {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 9rem;
+      fill: #3D7A5D; }
+    .seccionServicios .redondoServicio .w80 {
+      width: 8rem; }
+
+@media (max-width: 900px) {
+  .seccionServicios .serviciosGrupo {
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+    row-gap: 2rem; } }
+
+@media (max-width: 420px) {
+  .seccionServicios h2 {
+    font-size: 4rem; } }
+
+@media (max-width: 300px) {
+  .seccionServicios .serviciosGrupo {
+    display: block; }
+    .seccionServicios .serviciosGrupo .filaServicios {
+      margin-top: 2rem; } }

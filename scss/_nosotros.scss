@@ -83,6 +83,9 @@
 @media (max-width:420px) {
     .nosotros {
         display: block;
+        .tituloNosotros{
+            font-size: 4rem;
+        }
         .nosotrosImg{
             column-gap: 0.5rem;
             row-gap: 1rem;

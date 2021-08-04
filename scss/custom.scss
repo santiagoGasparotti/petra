@@ -4,9 +4,10 @@
 @import "../node_modules/bootstrap/scss/mixins";
 
 @import "../node_modules/bootstrap/scss/carousel";
+@import 'normalize';
 
 //Proyecto
 @import 'globales';
 @import 'header';
 @import 'nosotros';
-@import 'normalize';
+@import 'servicios';
