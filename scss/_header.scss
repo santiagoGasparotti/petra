@@ -1,0 +1,137 @@
+//Header
+
+//Navegacion
+.navegacion{
+    width: 100%;
+    background-color: $col-fondo;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    position: fixed;
+    .menuHamburguesa{
+        display: none;
+    }
+    .navegacionAncho{
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navegacionLogo{
+        img{
+            height: 8rem
+        }
+    }
+    .navegacionEnlaces{
+        display: flex;
+        width: 43rem;
+        justify-content: space-between;
+        a{
+            font-weight: $fue-medium;
+            font-size: 1.8rem;
+            font-family: $fue-pri;
+            color: #8B8B8B;
+            position: relative;
+            padding:1rem 0;
+        }
+        a:hover:after, .sectorActivo:after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 4.2rem;
+            height: 0.2rem;
+            background-color: $col-pri;
+        }
+        a:hover, .sectorActivo{
+            color: $col-pri;
+        }
+    }
+}
+
+
+.bootstrapCarousel{
+    position: relative;
+    margin-top: 10rem;
+    .imgCarousel{
+        height: 92.5vh;
+    }
+    .tituloPresentacion{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width:70%;
+        max-width: 83rem;
+        h1{
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            font-weight: $fue-bold;
+            color: $col-fondo;
+            font-size: 7.2rem;
+            letter-spacing: 0.43px;
+            line-height: 1;
+            margin: 0;
+        }
+        p{
+            font-size: 1.8rem;
+            font-weight: $fue-medium;
+            color: $col-fondo;
+            text-align: center;
+            padding-top: 2rem;
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .navegacion{
+        .navegacionEnlaces{
+            visibility: hidden;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            transform: translateX(100%);
+            transition: .4s;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.932);
+            a{
+                padding: 2rem 0;
+            }
+        }
+        .menuOpen{
+            visibility: visible;
+            transform: translateX(0%);
+        }
+        .menuHamburguesa{
+            display: inline-block;
+            cursor: pointer;
+            transition: 0.2s;
+            img{
+                width: 5rem;
+            }
+        }
+        .leftMenu{
+            transform: translateX(-100%);
+            transition: 0.5s;
+        }
+    }
+}
+
+@media (max-width:720px) {
+    .bootstrapCarousel .tituloPresentacion{
+        h1{
+            font-size: 4rem;
+        }
+    }
+}
+
+
+
+
+
+

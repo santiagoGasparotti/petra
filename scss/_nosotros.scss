@@ -1,0 +1,107 @@
+//Nosotros
+//Enlace donde enviara nosotros al hacer click
+.relativeId{
+    position: relative;
+    #nosotros{
+        position: absolute;
+        top: -5%;
+        left: 0;
+        opacity: 0;
+    }
+}
+
+
+.nosotros{
+    padding: 4.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 11.5rem;
+    row-gap: 5rem;
+    .tituloNosotros{
+        font-weight: $fue-bold;
+        font-family: $fue-pri;
+        font-size: 5.1rem;
+        display: inline-block;
+        position: relative;
+        padding: 1.5rem 0;
+        &:after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15rem;
+            height: 0.2rem;
+            background-color: $col-pri;
+        }
+    }
+    .textoNosotros{
+        font-family: 'Source Serif Pro', serif;
+        color:#737373;
+        line-height: 2.6rem;
+        padding: 4rem 0;
+    }
+    .posBoton{
+        margin: 0 7rem;
+    }
+    .nosotrosImg{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2.4rem;
+        row-gap: 2.4rem;
+        .imgCover{
+            height: 20rem;
+        }
+        .imgCover:last-child{
+            grid-column: 1/3;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .nosotros{   
+        column-gap: 2rem;
+    }
+    
+}
+@media (max-width: 720px) {
+    .nosotros{
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        .infoNosotros{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .tituloNosotros{
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .nosotros {
+        display: block;
+        .nosotrosImg{
+            column-gap: 0.5rem;
+            row-gap: 1rem;
+            margin-top: 5rem;
+        }
+        .nosotros{
+            width: 100%;
+        }
+    }
+}
+
+//Boton global (Podés usarlo para el boton del formulario)
+.boton{
+    border: none;
+    background-color: $col-pri;
+    color: $col-fondo;
+    padding: 1.5rem 5rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.64px;
+    margin: 0 auto;
+}

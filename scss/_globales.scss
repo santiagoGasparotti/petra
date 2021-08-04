@@ -1,0 +1,48 @@
+//Variables;
+$col-fondo: #fff;
+$col-pri: #3D7A5D;
+
+$fue-pri: 'Roboto', sans-serif;
+$fue-medium: 500;
+$fue-bold: 700;
+
+
+
+
+//Globales
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0; 
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior:smooth
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+p{
+    font-family: $fue-pri;
+    font-size: 1.6rem;
+}
+
+.imgCover{
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    object-position: center center;
+}
+
+.contenedorAncho{
+    width: 95%;
+    max-width: 110rem;
+    margin: 0 auto;
+}
+
+
+

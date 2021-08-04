@@ -1,0 +1,12 @@
+//Botstrap. Exportamos scss necesarios para el "carrousel"
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+@import "../node_modules/bootstrap/scss/carousel";
+
+//Proyecto
+@import 'globales';
+@import 'header';
+@import 'nosotros';
+@import 'normalize';
