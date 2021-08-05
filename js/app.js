@@ -2,12 +2,16 @@ const menu = document.querySelector("#menu");
 const menuContenedor = document.querySelector(".navegacionEnlaces");
 const menuEnlaces = document.querySelectorAll(".navegacionEnlaces a");
 
-document.addEventListener("DOMContentLoaded", () => {
+//Galeria de nuestras obras
+const imagenes = document.querySelectorAll(".obrasImg img")
+const grupoImg = document.querySelector(".seccionObras")
 
-    imagenesGaleria()
+document.addEventListener("DOMContentLoaded", () => {
+    imagenesGaleria();
+    behaviorSmooth();
 })
 
-
+//evenListeners
 menu.addEventListener("click", abrirMenu);
 
 function abrirMenu(e){
@@ -23,22 +27,21 @@ function cerrarMenu(e){
 }
 
 
-//Soporte a safari, probar si funciona en safaria.
-menuEnlaces.forEach(function(enlace) {
-    enlace.addEventListener("click",function(e){
-        e.preventDefault()
-        // console.log(e.target.attributes.href.value)
-        const seccion = document.querySelector(e.target.attributes.href.value);
-        
-        seccion.scrollIntoView({
-             behavior:'smooth'
-         });
+//Soporte a safari, probar si funciona en safari.
+function behaviorSmooth (){
+    menuEnlaces.forEach(function(enlace) {
+        enlace.addEventListener("click",function(e){
+            e.preventDefault()
+            // console.log(e.target.attributes.href.value)
+            const seccion = document.querySelector(e.target.attributes.href.value);
+            
+            seccion.scrollIntoView({
+                 behavior:'smooth'
+             });
+        })
     })
-})
+}
 
-//Galeria de nuestras obras
-const imagenes = document.querySelectorAll(".obrasImg img")
-const grupoImg = document.querySelector(".seccionObras")
 
 function imagenesGaleria(){
     for(let i = 0; i < imagenes.length; i++){
