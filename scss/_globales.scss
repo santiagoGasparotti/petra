@@ -54,5 +54,15 @@ p{
     margin: 0 auto;
 }
 
+//Titulos para las secciones
+.tituloSeccion{
+    font-weight: $fue-bold;
+    font-family: $fue-pri;
+    font-size: 5.1rem;
+    display: inline-block;
+    position: relative;
+    padding: 1.5rem 0;
+}
+
 
 

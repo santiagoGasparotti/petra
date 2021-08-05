@@ -2,7 +2,10 @@ const menu = document.querySelector("#menu");
 const menuContenedor = document.querySelector(".navegacionEnlaces");
 const menuEnlaces = document.querySelectorAll(".navegacionEnlaces a");
 
+document.addEventListener("DOMContentLoaded", () => {
 
+    imagenesGaleria()
+})
 
 
 menu.addEventListener("click", abrirMenu);
@@ -32,3 +35,36 @@ menuEnlaces.forEach(function(enlace) {
          });
     })
 })
+
+//Galeria de nuestras obras
+const imagenes = document.querySelectorAll(".obrasImg img")
+const grupoImg = document.querySelector(".seccionObras")
+
+function imagenesGaleria(){
+    for(let i = 0; i < imagenes.length; i++){
+        console.log(imagenes[i])
+        imagenes[i].addEventListener("click", abrirGaleria);
+    }
+}
+
+function abrirGaleria(e){
+    const img = e.target.src;
+    const divImg = document.createElement("div");
+    const imgGrande = document.createElement("img");
+    const cerrar = document.createElement("div");
+    
+    cerrar.innerHTML = `<p>X</p>`;
+    cerrar.classList.add("cerrar");
+    divImg.classList.add("fondoImg");
+    imgGrande.classList.add("imgGaleria");
+    imgGrande.src = img;
+    //Cerramos GALERIA
+    cerrar.addEventListener("click", () => {
+        divImg.remove();  
+    })
+    
+    
+    divImg.appendChild(imgGrande);
+    divImg.appendChild(cerrar);
+    grupoImg.appendChild(divImg);
+}
