@@ -24,6 +24,7 @@ function abrirMenu(e){
 
 function cerrarMenu(e){
     menuContenedor.classList.toggle("menuOpen");
+    menu.classList.toggle("leftMenu");
 }
 
 
@@ -45,7 +46,6 @@ function behaviorSmooth (){
 
 function imagenesGaleria(){
     for(let i = 0; i < imagenes.length; i++){
-        console.log(imagenes[i])
         imagenes[i].addEventListener("click", abrirGaleria);
     }
 }
@@ -71,3 +71,25 @@ function abrirGaleria(e){
     divImg.appendChild(cerrar);
     grupoImg.appendChild(divImg);
 }
+
+//probando Animacion de enlaces
+// const observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//         const enlaceActive = entry.target.getAttribute("id");
+//         const menuLink = document.querySelector(`.navegacionEnlaces a[href="#${enlaceActive}"]`)
+        
+//         if(entry.isIntersecting){
+//              menuLink.classList.remove("sectorActivo")
+//              menuLink.classList.add("sectorActivo")
+//         }
+//     })
+// }, {rootMargin: "20% 0px -80% 0px"})
+
+// const enlaceId = document.querySelectorAll(".enlaceId");
+// console.log(enlaceId)
+//     enlaceId.forEach(seccion => {
+//         const activo = seccion.getAttribute("href")
+//         const pa = document.querySelector("#activo")
+//         console.log(activo)
+//         observer.observe(pa)
+//     })

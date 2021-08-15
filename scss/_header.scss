@@ -18,8 +18,18 @@
         justify-content: space-between;
     }
     .navegacionLogo{
-        img{
+        display: flex;
+        align-items: center;
+        svg{
             height: 8rem
+        }
+        p{
+            font-size: 1.4rem;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 0.2rem;
+            padding-left: 2rem;
+            color: #000;
+            font-weight:400;
         }
     }
     .navegacionEnlaces{
@@ -34,7 +44,16 @@
             position: relative;
             padding:1rem 0;
         }
-        a:hover:after, .sectorActivo:after{
+        .sectorActivo:after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 4.2rem;
+            height: 0.2rem;
+            background-color: $col-pri;
+        }
+        a:hover:after{
             content: "";
             position: absolute;
             bottom: 0;
@@ -112,7 +131,7 @@
             cursor: pointer;
             transition: 0.2s;
             img{
-                width: 5rem;
+                width: 4.7rem;
             }
         }
         .leftMenu{
@@ -127,6 +146,16 @@
         h1{
             font-size: 4rem;
         }
+    }
+    .navegacion{
+        .navegacionLogo{
+            p{
+            font-size: 1.2rem;
+            }
+            svg{
+                width: 6rem;
+            }
+        }        
     }
 }
 

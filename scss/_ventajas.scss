@@ -1,0 +1,61 @@
+.tituloVentaja{
+    display: block;
+    text-align: center;
+    padding-top: 5.2rem;
+    &:after{
+        @include lineaVerde;
+        bottom: -1rem;
+    }
+}
+
+.seccionVentaja{
+    background-color: #ebebeb;
+}
+
+.ventajas{
+    display: grid;
+    column-gap: 3rem;
+    row-gap: 6rem;
+    padding: 6rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    .ventajasGrupo{
+        display: flex;
+        justify-content: space-between;
+    }
+    svg{
+        fill: $col-pri;
+        width: 5.1rem;
+        height: 5.1rem;
+    }
+    p{
+        padding-left: 2rem;
+        letter-spacing: 0.03rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media (max-width:720px){
+    .ventajas{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+        column-gap: 2rem;
+        p{
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media (max-width:480px){
+    .ventajas{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 3rem;
+        p{
+            font-size: 1.4rem;
+        }
+    }
+}
+@media (max-width:720px){
+    .tituloVentaja{
+        font-size: 4rem;
+    }
+}
