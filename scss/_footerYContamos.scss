@@ -4,17 +4,17 @@
 
 .float{
 	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
+	width:6rem;
+	height:6rem;
+	bottom:4rem;
+	right:4rem;
 	background-color:#25d366;
 	color:#FFF;
-	border-radius:50px;
+	border-radius:5rem;
 	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
+    font-size:3rem;
+	box-shadow: 0.2rem 0.2rem 0.3rem #999;
+    z-index:100;
 }
 .float:hover {
 	text-decoration: none;
@@ -23,21 +23,21 @@
 }
 
 .my-float{
-	margin-top:16px;
+	margin-top: 1.6rem;
 }
 
 .width100 {
     width: 100%;
     margin: 0;
-	padding: 5px 0px ;
+	padding: 0.5rem 0rem ;
 }
 
 .btn{
-	padding: 10px 105px;
+	padding: 1rem 10.5rem;
 }
 
 .iconosFoteer{
-	padding: 0px 0px;
+	padding: 0rem 0rem;
 }
 
 /* Underline From Left */
@@ -58,7 +58,7 @@
 	right: 100%;
 	bottom: 0;
 	background: #3D7A5D;
-	height: 4px;
+	height: 0.4rem;
 	-webkit-transition-property: right;
 	transition-property: right;
 	-webkit-transition-duration: 0.3s;
