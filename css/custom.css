@@ -586,8 +586,7 @@ p {
     .navegacion .navegacionEnlaces .enlaceSeccion:hover, .navegacion .navegacionEnlaces .sectorActivo {
       color: #3D7A5D; }
     .navegacion .navegacionEnlaces .iconoMenu {
-      visibility: hidden;
-      opacity: 0; }
+      display: none; }
 
 .sinScroll {
   overflow-y: hidden; }
@@ -636,11 +635,10 @@ p {
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.932); }
-    .navegacion .navegacionEnlaces a {
+    .navegacion .navegacionEnlaces .enlaceSeccion {
       padding: 2rem 0; }
     .navegacion .navegacionEnlaces .iconoMenu {
-      visibility: visible;
-      opacity: 1;
+      display: block;
       position: absolute;
       bottom: 15%;
       display: flex;

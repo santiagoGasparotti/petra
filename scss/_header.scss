@@ -66,8 +66,7 @@
             color: $col-pri;
         }
         .iconoMenu{
-            visibility: hidden;
-            opacity: 0;
+            display: none;
         }
     }
 }
@@ -126,12 +125,11 @@
             align-items: center;
             justify-content: center;
             background-color: rgba(255, 255, 255, 0.932);
-            a{
+            .enlaceSeccion{
                 padding: 2rem 0;
             }
             .iconoMenu{
-                visibility: visible;
-                opacity: 1;
+                display: block;
                 position: absolute;
                 bottom: 15%;
                 display: flex;
