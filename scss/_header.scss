@@ -65,6 +65,10 @@
         a:hover, .sectorActivo{
             color: $col-pri;
         }
+        .iconoMenu{
+            visibility: hidden;
+            opacity: 0;
+        }
     }
 }
 
@@ -120,6 +124,21 @@
             background-color: rgba(255, 255, 255, 0.932);
             a{
                 padding: 2rem 0;
+            }
+            .iconoMenu{
+                visibility: visible;
+                opacity: 1;
+                position: absolute;
+                bottom: 5%;
+                display: flex;
+                margin-top: 10rem;
+                column-gap: 2rem;
+                .iconSvg1{
+                    width: 6rem;
+                }
+                .iconSvg2{
+                    width: 5rem;
+                }
             }
         }
         .menuOpen{

@@ -1,6 +1,6 @@
 const menu = document.querySelector("#menu");
 const menuContenedor = document.querySelector(".navegacionEnlaces");
-const menuEnlaces = document.querySelectorAll(".navegacionEnlaces a");
+const menuEnlaces = document.querySelectorAll(".navegacionEnlaces .enlaceSeccion");
 
 //Galeria de nuestras obras
 const imagenes = document.querySelectorAll(".obrasImg img")
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //evenListeners
 menu.addEventListener("click", abrirMenu);
 
-function abrirMenu(e){
+function abrirMenu(){
     menuContenedor.classList.toggle("menuOpen");
     menu.classList.toggle("leftMenu")
     menuEnlaces.forEach(enlace => {
@@ -22,7 +22,7 @@ function abrirMenu(e){
     })
 }
 
-function cerrarMenu(e){
+function cerrarMenu(){
     menuContenedor.classList.toggle("menuOpen");
     menu.classList.toggle("leftMenu");
 }
@@ -33,7 +33,6 @@ function behaviorSmooth (){
     menuEnlaces.forEach(function(enlace) {
         enlace.addEventListener("click",function(e){
             e.preventDefault()
-            // console.log(e.target.attributes.href.value)
             const seccion = document.querySelector(e.target.attributes.href.value);
             
             seccion.scrollIntoView({
@@ -72,24 +71,3 @@ function abrirGaleria(e){
     grupoImg.appendChild(divImg);
 }
 
-//probando Animacion de enlaces
-// const observer = new IntersectionObserver(entries => {
-//     entries.forEach(entry => {
-//         const enlaceActive = entry.target.getAttribute("id");
-//         const menuLink = document.querySelector(`.navegacionEnlaces a[href="#${enlaceActive}"]`)
-        
-//         if(entry.isIntersecting){
-//              menuLink.classList.remove("sectorActivo")
-//              menuLink.classList.add("sectorActivo")
-//         }
-//     })
-// }, {rootMargin: "20% 0px -80% 0px"})
-
-// const enlaceId = document.querySelectorAll(".enlaceId");
-// console.log(enlaceId)
-//     enlaceId.forEach(seccion => {
-//         const activo = seccion.getAttribute("href")
-//         const pa = document.querySelector("#activo")
-//         console.log(activo)
-//         observer.observe(pa)
-//     })

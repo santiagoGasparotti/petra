@@ -522,6 +522,14 @@ p {
   position: relative;
   padding: 1.5rem 0; }
 
+@media (max-width: 720px) {
+  .tituloSeccion {
+    font-size: 4.5rem; } }
+
+@media (max-width: 420px) {
+  .tituloSeccion {
+    font-size: 4rem; } }
+
 .navegacion {
   width: 100%;
   background-color: #fff;
@@ -577,6 +585,9 @@ p {
       background-color: #3D7A5D; }
     .navegacion .navegacionEnlaces a:hover, .navegacion .navegacionEnlaces .sectorActivo {
       color: #3D7A5D; }
+    .navegacion .navegacionEnlaces .iconoMenu {
+      visibility: hidden;
+      opacity: 0; }
 
 .bootstrapCarousel {
   position: relative;
@@ -623,6 +634,18 @@ p {
     background-color: rgba(255, 255, 255, 0.932); }
     .navegacion .navegacionEnlaces a {
       padding: 2rem 0; }
+    .navegacion .navegacionEnlaces .iconoMenu {
+      visibility: visible;
+      opacity: 1;
+      position: absolute;
+      bottom: 5%;
+      display: flex;
+      margin-top: 10rem;
+      column-gap: 2rem; }
+      .navegacion .navegacionEnlaces .iconoMenu .iconSvg1 {
+        width: 6rem; }
+      .navegacion .navegacionEnlaces .iconoMenu .iconSvg2 {
+        width: 5rem; }
   .navegacion .menuOpen {
     visibility: visible;
     transform: translateX(0%); }
@@ -681,7 +704,9 @@ p {
     line-height: 2.6rem;
     padding: 4rem 0; }
   .nosotros .posBoton {
-    margin: 0 7rem; }
+    margin: 0 7rem;
+    text-decoration: none;
+    color: #fff; }
   .nosotros .nosotrosImg {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -901,6 +926,11 @@ p {
     opacity: 1;
     transition: .3s; }
 
+@media (max-width: 1300px) {
+  .obrasImg .imgHover p {
+    font-size: 2rem;
+    padding: 0 1rem; } }
+
 @media (max-width: 900px) {
   .obrasImg {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -908,7 +938,11 @@ p {
     row-gap: 1rem; }
     .obrasImg .imgHover {
       visibility: visible;
-      opacity: 1; } }
+      opacity: 1; }
+      .obrasImg .imgHover p {
+        font-size: 1.6rem;
+        padding: 0 1rem;
+        margin: 4rem 0 0 0; } }
 
 .fondoImg {
   position: fixed;

@@ -52,7 +52,16 @@
     }
 }
 
-
+@media (max-width:1300px) {
+    .obrasImg{
+        .imgHover{
+            p{
+                font-size: 2rem;
+                padding: 0 1rem;
+            }
+        }
+    }
+}
 
 
 @media (max-width:900px) {
@@ -63,6 +72,11 @@
         .imgHover{
             visibility: visible;
             opacity: 1;
+            p{
+                font-size: 1.6rem;
+                padding: 0 1rem;
+                margin: 4rem 0 0 0;
+            }
         }
     }
 }
