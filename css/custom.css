@@ -759,7 +759,7 @@ p {
   background-color: #d0d0d0; }
   .seccionServicios .serviciosGrupo {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     row-gap: 5rem;
     margin-top: 7rem; }
     .seccionServicios .serviciosGrupo .filaServicios {
@@ -942,7 +942,7 @@ p {
       .obrasImg .imgHover p {
         font-size: 1.6rem;
         padding: 0 1rem;
-        margin: 4rem 0 0 0; } }
+        margin: 3rem 0 0 0; } }
 
 .fondoImg {
   position: fixed;
