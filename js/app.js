@@ -1,6 +1,7 @@
 const menu = document.querySelector("#menu");
 const menuContenedor = document.querySelector(".navegacionEnlaces");
 const menuEnlaces = document.querySelectorAll(".navegacionEnlaces .enlaceSeccion");
+const body = document.querySelector("#inicio");
 
 //Galeria de nuestras obras
 const imagenes = document.querySelectorAll(".obrasImg img")
@@ -16,7 +17,8 @@ menu.addEventListener("click", abrirMenu);
 
 function abrirMenu(){
     menuContenedor.classList.toggle("menuOpen");
-    menu.classList.toggle("leftMenu")
+    menu.classList.toggle("leftMenu");
+    body.classList.toggle("sinScroll");
     menuEnlaces.forEach(enlace => {
         enlace.addEventListener("click", cerrarMenu);
     })
@@ -25,6 +27,7 @@ function abrirMenu(){
 function cerrarMenu(){
     menuContenedor.classList.toggle("menuOpen");
     menu.classList.toggle("leftMenu");
+    body.classList.toggle("sinScroll");
 }
 
 
@@ -58,7 +61,11 @@ function abrirGaleria(e){
     cerrar.innerHTML = `<p>X</p>`;
     cerrar.classList.add("cerrar");
     divImg.classList.add("fondoImg");
-    imgGrande.classList.add("imgGaleria");
+    if(e.target.alt === "Salon de fiestas, jano's - Ituzaingo"){
+        imgGrande.classList.add("imgGaleriaHorizontal")
+    }else{
+        imgGrande.classList.add("imgGaleria");
+    }
     imgGrande.src = img;
     //Cerramos GALERIA
     cerrar.addEventListener("click", () => {

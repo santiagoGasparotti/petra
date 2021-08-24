@@ -560,7 +560,7 @@ p {
     display: flex;
     width: 43rem;
     justify-content: space-between; }
-    .navegacion .navegacionEnlaces a {
+    .navegacion .navegacionEnlaces .enlaceSeccion {
       font-weight: 500;
       font-size: 1.8rem;
       font-family: "Roboto", sans-serif;
@@ -575,7 +575,7 @@ p {
       width: 4.2rem;
       height: 0.2rem;
       background-color: #3D7A5D; }
-    .navegacion .navegacionEnlaces a:hover:after {
+    .navegacion .navegacionEnlaces .enlaceSeccion:hover:after {
       content: "";
       position: absolute;
       bottom: 0;
@@ -583,17 +583,21 @@ p {
       width: 4.2rem;
       height: 0.2rem;
       background-color: #3D7A5D; }
-    .navegacion .navegacionEnlaces a:hover, .navegacion .navegacionEnlaces .sectorActivo {
+    .navegacion .navegacionEnlaces .enlaceSeccion:hover, .navegacion .navegacionEnlaces .sectorActivo {
       color: #3D7A5D; }
     .navegacion .navegacionEnlaces .iconoMenu {
       visibility: hidden;
       opacity: 0; }
 
+.sinScroll {
+  overflow-y: hidden; }
+
 .bootstrapCarousel {
   position: relative;
   margin-top: 10rem; }
   .bootstrapCarousel .imgCarousel {
-    height: 92.5vh; }
+    height: 92.5vh;
+    filter: brightness(90%); }
   .bootstrapCarousel .tituloPresentacion {
     position: absolute;
     top: 50%;
@@ -638,10 +642,10 @@ p {
       visibility: visible;
       opacity: 1;
       position: absolute;
-      bottom: 5%;
+      bottom: 15%;
       display: flex;
       margin-top: 10rem;
-      column-gap: 2rem; }
+      column-gap: 4rem; }
       .navegacion .navegacionEnlaces .iconoMenu .iconSvg1 {
         width: 6rem; }
       .navegacion .navegacionEnlaces .iconoMenu .iconSvg2 {
@@ -666,6 +670,16 @@ p {
     font-size: 1.2rem; }
   .navegacion .navegacionLogo svg {
     width: 6rem; } }
+
+@media (max-width: 500px) {
+  .navegacion .navegacionEnlaces .iconoMenu {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    margin-top: 10rem;
+    column-gap: 3rem; } }
 
 .relativeId {
   position: relative; }
@@ -914,22 +928,26 @@ p {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 30%;
+    height: 40%;
     background: transparent linear-gradient(180deg, #48484800 0%, #000000C4 70%); }
     .obrasImg .imgHover p {
       color: #fff;
-      font-size: 2.8rem;
-      padding-left: 4rem;
-      margin-top: 2.5rem; }
+      font-size: 2.4rem;
+      padding-left: 3rem;
+      margin-top: 3rem; }
   .obrasImg .imgObra:hover .imgHover {
     visibility: visible;
     opacity: 1;
     transition: .3s; }
 
 @media (max-width: 1300px) {
-  .obrasImg .imgHover p {
-    font-size: 2rem;
-    padding: 0 1rem; } }
+  .obrasImg .imgHover {
+    display: flex;
+    align-items: center; }
+    .obrasImg .imgHover p {
+      font-size: 2rem;
+      padding: 0 1rem;
+      margin: 4.5rem 0 0 0; } }
 
 @media (max-width: 900px) {
   .obrasImg {
@@ -940,9 +958,7 @@ p {
       visibility: visible;
       opacity: 1; }
       .obrasImg .imgHover p {
-        font-size: 1.6rem;
-        padding: 0 1rem;
-        margin: 3rem 0 0 0; } }
+        font-size: 1.6rem; } }
 
 .fondoImg {
   position: fixed;
@@ -974,6 +990,13 @@ p {
   .fondoImg .imgGaleria {
     height: 85%;
     width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .fondoImg .imgGaleriaHorizontal {
+    width: 90%;
+    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;

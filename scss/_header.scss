@@ -36,7 +36,7 @@
         display: flex;
         width: 43rem;
         justify-content: space-between;
-        a{
+        .enlaceSeccion{
             font-weight: $fue-medium;
             font-size: 1.8rem;
             font-family: $fue-pri;
@@ -53,7 +53,7 @@
             height: 0.2rem;
             background-color: $col-pri;
         }
-        a:hover:after{
+        .enlaceSeccion:hover:after{
             content: "";
             position: absolute;
             bottom: 0;
@@ -62,7 +62,7 @@
             height: 0.2rem;
             background-color: $col-pri;
         }
-        a:hover, .sectorActivo{
+        .enlaceSeccion:hover, .sectorActivo{
             color: $col-pri;
         }
         .iconoMenu{
@@ -72,12 +72,16 @@
     }
 }
 
+.sinScroll{
+    overflow-y:hidden;
+}
 
 .bootstrapCarousel{
     position: relative;
     margin-top: 10rem;
     .imgCarousel{
         height: 92.5vh;
+        filter: brightness(90%);
     }
     .tituloPresentacion{
         position: absolute;
@@ -129,10 +133,10 @@
                 visibility: visible;
                 opacity: 1;
                 position: absolute;
-                bottom: 5%;
+                bottom: 15%;
                 display: flex;
                 margin-top: 10rem;
-                column-gap: 2rem;
+                column-gap: 4rem;
                 .iconSvg1{
                     width: 6rem;
                 }
@@ -177,6 +181,23 @@
         }        
     }
 }
+
+@media (max-width:500px) {
+    .navegacion{
+        .navegacionEnlaces{
+            .iconoMenu{
+                visibility: visible;
+                opacity: 1;
+                position: absolute;
+                bottom: 10%;
+                display: flex;
+                margin-top: 10rem;
+                column-gap: 3rem;
+            }
+        }
+    }
+}
+
 
 
 
