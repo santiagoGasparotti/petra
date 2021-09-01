@@ -77,6 +77,10 @@
 //Titulo
 .tituloContamos{
   position: relative;
+  font-size: 5.1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+
 }
 
 .tituloContamos:after{
@@ -89,6 +93,9 @@
 }
 
 @media (max-width: 720px) {
+	.tituloContamos{
+		font-size: 4rem;
+	}
 	.tituloContamos:after{
 		width: 15rem;
 	}
