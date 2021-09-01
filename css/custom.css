@@ -707,9 +707,10 @@ p {
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 15rem;
+      width: 0rem;
       height: 0.2rem;
-      background-color: #3D7A5D; }
+      background-color: #3D7A5D;
+      transition: 0.2s; }
   .nosotros .textoNosotros {
     font-family: 'Source Serif Pro', serif;
     color: #737373;
@@ -729,6 +730,10 @@ p {
     .nosotros .nosotrosImg .imgCover:last-child {
       grid-column: 1/3; }
 
+.nosotros:hover .tituloNosotros:after {
+  width: 15rem;
+  transition: 0.3s; }
+
 @media (max-width: 1050px) {
   .nosotros {
     column-gap: 2rem; } }
@@ -742,7 +747,9 @@ p {
       flex-direction: column;
       align-items: center; }
     .nosotros .tituloNosotros {
-      text-align: center; } }
+      text-align: center; }
+      .nosotros .tituloNosotros:after {
+        width: 15rem; } }
 
 @media (max-width: 420px) {
   .nosotros {
@@ -797,10 +804,14 @@ p {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      width: 15rem;
+      width: 0rem;
       height: 0.2rem;
       background-color: #3D7A5D;
+      transition: 0.3s;
       bottom: -2rem; }
+    .seccionServicios h2:hover:after {
+      width: 15rem;
+      transition: 0.3s; }
   .seccionServicios .redondoServicio {
     background-color: #fff;
     width: 13.5rem;
@@ -817,10 +828,18 @@ p {
     .seccionServicios .redondoServicio .w80 {
       width: 8rem; }
 
+.seccionServicios:hover h2:after {
+  width: 15rem;
+  transition: .3s; }
+
 @media (max-width: 900px) {
   .seccionServicios .serviciosGrupo {
     grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
     row-gap: 2rem; } }
+
+@media (max-width: 720px) {
+  .seccionServicios h2:after {
+    width: 15rem; } }
 
 @media (max-width: 420px) {
   .seccionServicios h2 {
@@ -841,13 +860,17 @@ p {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 15rem;
+    width: 0rem;
     height: 0.2rem;
     background-color: #3D7A5D;
+    transition: 0.3s;
     bottom: -1rem; }
 
 .seccionVentaja {
   background-color: #ebebeb; }
+  .seccionVentaja:hover .tituloVentaja:after {
+    width: 15rem;
+    transition: .3s; }
 
 .ventajas {
   display: grid;
@@ -873,7 +896,9 @@ p {
     row-gap: 2rem;
     column-gap: 2rem; }
     .ventajas p {
-      font-size: 1.4rem; } }
+      font-size: 1.4rem; }
+  .tituloVentaja:after {
+    width: 15rem; } }
 
 @media (max-width: 480px) {
   .ventajas {
@@ -896,10 +921,15 @@ p {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      width: 15rem;
+      width: 0rem;
       height: 0.2rem;
       background-color: #3D7A5D;
+      transition: 0.3s;
       bottom: -1rem; }
+
+.seccionObras:hover .tituloObras:after {
+  width: 15rem;
+  transition: .3s; }
 
 .contenedorObras {
   width: 120rem;
@@ -958,6 +988,10 @@ p {
       .obrasImg .imgHover p {
         font-size: 1.6rem; } }
 
+@media (max-width: 720px) {
+  .seccionObras .tituloObras:after {
+    width: 15rem; } }
+
 .fondoImg {
   position: fixed;
   top: 0;
@@ -1014,16 +1048,16 @@ p {
 
 .float {
   position: fixed;
-  width: 6rem;
-  height: 6rem;
-  bottom: 4rem;
-  right: 4rem;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
   background-color: #25d366;
   color: #FFF;
-  border-radius: 5rem;
+  border-radius: 50px;
   text-align: center;
-  font-size: 3rem;
-  box-shadow: 0.2rem 0.2rem 0.3rem #999;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
   z-index: 100; }
 
 .float:hover {
@@ -1032,18 +1066,18 @@ p {
   background-color: #fff; }
 
 .my-float {
-  margin-top: 1.6rem; }
+  margin-top: 16px; }
 
 .width100 {
   width: 100%;
   margin: 0;
-  padding: 0.5rem 0rem; }
+  padding: 5px 0px; }
 
 .btn {
-  padding: 1rem 10.5rem; }
+  padding: 10px 105px; }
 
 .iconosFoteer {
-  padding: 0rem 0rem; }
+  padding: 0px 0px; }
 
 /* Underline From Left */
 .hvr-underline-from-left {
@@ -1063,7 +1097,7 @@ p {
   right: 100%;
   bottom: 0;
   background: #3D7A5D;
-  height: 0.4rem;
+  height: 4px;
   -webkit-transition-property: right;
   transition-property: right;
   -webkit-transition-duration: 0.3s;
@@ -1076,3 +1110,24 @@ p {
 
 .imgText img {
   float: left; }
+
+.tituloContamos {
+  position: relative; }
+
+.tituloContamos:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0rem;
+  height: 0.2rem;
+  background-color: #3D7A5D;
+  transition: 0.3s;
+  bottom: -1rem; }
+
+.seccionContamos:hover .tituloContamos:after {
+  width: 15rem; }
+
+@media (max-width: 720px) {
+  .tituloContamos:after {
+    width: 15rem; } }

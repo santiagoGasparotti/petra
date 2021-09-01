@@ -34,6 +34,10 @@
             @include lineaVerde;
             bottom: -2rem;
         }
+        &:hover:after{
+            width: 15rem;
+            transition: 0.3s;
+        }
     }
     .redondoServicio{
         background-color: $col-fondo;
@@ -55,6 +59,11 @@
     }
 }
 
+.seccionServicios:hover h2:after{
+    width: 15rem;
+    transition: .3s;
+}
+
 @media (max-width:900px) {
     .seccionServicios {
         .serviciosGrupo{
@@ -63,6 +72,15 @@
         }
     }
 }
+
+@media (max-width:720px) {
+    .seccionServicios {
+        h2:after{
+            width: 15rem;
+        }
+    }
+}
+
 @media (max-width:420px) {
     .seccionServicios{
         h2{

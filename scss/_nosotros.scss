@@ -31,9 +31,10 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 15rem;
+            width: 0rem;
             height: 0.2rem;
             background-color: $col-pri;
+            transition: 0.2s;
         }
     }
     .textoNosotros{
@@ -61,6 +62,11 @@
     }
 }
 
+.nosotros:hover .tituloNosotros:after{
+    width: 15rem;
+    transition: 0.3s;
+}
+
 @media (max-width: 1050px) {
     .nosotros{   
         column-gap: 2rem;
@@ -78,6 +84,9 @@
         }
         .tituloNosotros{
             text-align: center;
+            &:after{
+                width: 15rem;
+            }
         }
     }
 }

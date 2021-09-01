@@ -9,6 +9,12 @@
         }
     }
 }
+
+.seccionObras:hover .tituloObras:after{
+    width: 15rem;
+    transition: .3s;
+}
+
 .contenedorObras{
     width: 120rem;
     max-width: 90%;
@@ -78,6 +84,14 @@
             p{
                 font-size: 1.6rem;
             }
+        }
+    }
+}
+
+@media (max-width:720px) {
+    .seccionObras {
+        .tituloObras:after{
+            width: 15rem;
         }
     }
 }

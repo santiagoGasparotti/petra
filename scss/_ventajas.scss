@@ -10,6 +10,10 @@
 
 .seccionVentaja{
     background-color: #ebebeb;
+    &:hover .tituloVentaja:after{
+        width: 15rem;
+        transition: .3s;
+    }
 }
 
 .ventajas{
@@ -42,6 +46,9 @@
         p{
             font-size: 1.4rem;
         }
+    }
+    .tituloVentaja:after{
+        width: 15rem;
     }
 }
 

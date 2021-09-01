@@ -73,3 +73,23 @@
   .imgText img {
 	  float: left;
   }
+
+//Titulo
+.tituloContamos{
+  position: relative;
+}
+
+.tituloContamos:after{
+	@include lineaVerde;
+	bottom: -1rem
+}
+
+.seccionContamos:hover .tituloContamos:after{
+	width: 15rem;
+}
+
+@media (max-width: 720px) {
+	.tituloContamos:after{
+		width: 15rem;
+	}
+}
