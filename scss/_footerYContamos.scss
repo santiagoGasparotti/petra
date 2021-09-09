@@ -100,3 +100,30 @@
 		width: 15rem;
 	}
 }
+
+//Titulo contáctenos
+.tituloContactenosFooter{
+	position: relative;
+	&:after{
+		@include lineaVerde;
+		bottom:-1rem;
+		left: 0;
+		transform:translateX(0%) ;
+}}
+.seccionFooter{
+	&:hover .tituloContactenosFooter:after{
+		width: 15rem;
+        transition: .3s;
+	}
+}
+
+@media (max-width: 720px) {
+	.tituloContactenosFooter{
+		&:after{
+			@include lineaVerde;
+			bottom:-1rem;
+			left: 0;
+			transform:translateX(0%);
+			width: 15rem;
+	}}
+}

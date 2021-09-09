@@ -1136,3 +1136,37 @@ p {
     font-size: 4rem; }
   .tituloContamos:after {
     width: 15rem; } }
+
+.tituloContactenosFooter {
+  position: relative; }
+  .tituloContactenosFooter:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0rem;
+    height: 0.2rem;
+    background-color: #3D7A5D;
+    transition: 0.3s;
+    bottom: -1rem;
+    left: 0;
+    transform: translateX(0%); }
+
+.seccionFooter:hover .tituloContactenosFooter:after {
+  width: 15rem;
+  transition: .3s; }
+
+@media (max-width: 720px) {
+  .tituloContactenosFooter:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0rem;
+    height: 0.2rem;
+    background-color: #3D7A5D;
+    transition: 0.3s;
+    bottom: -1rem;
+    left: 0;
+    transform: translateX(0%);
+    width: 15rem; } }
