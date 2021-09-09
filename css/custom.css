@@ -676,7 +676,6 @@ p {
     position: absolute;
     bottom: 10%;
     display: flex;
-    margin-top: 10rem;
     column-gap: 3rem; } }
 
 .relativeId {
@@ -1130,6 +1129,9 @@ p {
 
 .seccionContamos:hover .tituloContamos:after {
   width: 15rem; }
+
+.i-app {
+  z-index: 89; }
 
 @media (max-width: 720px) {
   .tituloContamos {
