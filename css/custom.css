@@ -643,10 +643,8 @@ p {
       bottom: 15%;
       display: flex;
       column-gap: 4rem; }
-      .navegacion .navegacionEnlaces .iconoMenu .iconSvg1 {
-        width: 6rem; }
       .navegacion .navegacionEnlaces .iconoMenu .iconSvg2 {
-        width: 5rem; }
+        width: 14rem; }
   .navegacion .menuOpen {
     visibility: visible;
     transform: translateX(0%); }
