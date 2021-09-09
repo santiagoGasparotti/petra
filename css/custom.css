@@ -642,7 +642,6 @@ p {
       position: absolute;
       bottom: 15%;
       display: flex;
-      margin-top: 10rem;
       column-gap: 4rem; }
       .navegacion .navegacionEnlaces .iconoMenu .iconSvg1 {
         width: 6rem; }
