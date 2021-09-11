@@ -6,7 +6,7 @@ $fue-pri: 'Roboto', sans-serif;
 $fue-medium: 500;
 $fue-bold: 700;
 
-//Posicionamiento y ancho, ya definido. Falta poner el posicionamiente del BOTTOM. Puede poner como valor 0, para guiarse a posicionar
+//Posicionamiento ya definido. Falta poner el posicionamiente del BOTTOM. Puede poner como valor 0, para guiarse a posicionar
 @mixin lineaVerde {
         content: "";
         position: absolute;
