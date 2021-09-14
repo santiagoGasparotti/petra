@@ -2,6 +2,7 @@ const menu = document.querySelector("#menu");
 const menuContenedor = document.querySelector(".navegacionEnlaces");
 const menuEnlaces = document.querySelectorAll(".navegacionEnlaces .enlaceSeccion");
 const body = document.querySelector("#inicio");
+const enlacesActive = document.querySelectorAll(".seccionNavActive");
 
 //Galeria de nuestras obras
 const imagenes = document.querySelectorAll(".obrasImg img")
@@ -78,3 +79,25 @@ function abrirGaleria(e){
     grupoImg.appendChild(divImg);
 }
 
+const callback = (entries) => {
+    entries.forEach(entry => {
+        const claseNav = entry.target.classList[0];
+        const sectorActivo = document.querySelector(".sectorActivo");
+        if(entry.isIntersecting){
+            //Comprobar si existe esta clase(estilo de la linea verde en el enlace), se borrara y luego se agregar al enlace 
+            if(sectorActivo){
+                sectorActivo.classList.remove("sectorActivo")
+            }
+            //Agregamos el enlace
+            const enlaceActivoNav = document.querySelector(`[data-enlace="${claseNav}"]`);
+            enlaceActivoNav.classList.add("sectorActivo")
+        }
+    })
+}
+
+const options = {
+    threshold: 0.75
+}
+
+const observer = new IntersectionObserver(callback, options)
+enlacesActive.forEach(enlace => observer.observe(enlace))
