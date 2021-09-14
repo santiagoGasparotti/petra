@@ -38,7 +38,8 @@
         }
     }
     .textoNosotros{
-        font-family: 'Source Serif Pro', serif;
+        font-family: $fue-pri;
+        font-weight: 400;
         color:#737373;
         line-height: 2.6rem;
         padding: 4rem 0;
@@ -118,4 +119,5 @@
     font-size: 1.6rem;
     letter-spacing: 0.64px;
     margin: 0 auto;
+    border-radius: 2.5px;
 }
