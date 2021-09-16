@@ -536,14 +536,18 @@ p {
   top: 0;
   left: 0;
   z-index: 99;
-  position: fixed; }
+  position: fixed;
+  box-shadow: 1px 16px 55px -1px rgba(169, 161, 161, 0.57);
+  -webkit-box-shadow: 1px 16px 55px -1px rgba(169, 161, 161, 0.57);
+  -moz-box-shadow: 1px 16px 55px -1px rgba(169, 161, 161, 0.57); }
   .navegacion .menuHamburguesa {
     display: none; }
   .navegacion .navegacionAncho {
     height: 10rem;
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    position: relative; }
   .navegacion .navegacionLogo {
     display: flex;
     align-items: center; }
@@ -1057,7 +1061,7 @@ p {
   color: #FFF;
   border-radius: 50px;
   text-align: center;
-  font-size: 30px;
+  font-size: 37.5px;
   box-shadow: 2px 2px 3px #999;
   z-index: 100; }
 
@@ -1067,7 +1071,7 @@ p {
   background-color: #fff; }
 
 .my-float {
-  margin-top: 16px; }
+  margin-top: 13px; }
 
 .width100 {
   width: 100%;
