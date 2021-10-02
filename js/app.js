@@ -56,26 +56,25 @@ function imagenesGaleria(){
 function abrirGaleria(e){
     const img = e.target.src;
     const divImg = document.createElement("div");
+    const divContenedorImg = document.createElement("div")
     const imgGrande = document.createElement("img");
     const cerrar = document.createElement("div");
     
     cerrar.innerHTML = `<p>X</p>`;
     cerrar.classList.add("cerrar");
     divImg.classList.add("fondoImg");
-    if(e.target.alt === "Salon de fiestas, jano's - Ituzaingo"){
-        imgGrande.classList.add("imgGaleriaHorizontal")
-    }else{
-        imgGrande.classList.add("imgGaleria");
-    }
+    divContenedorImg.classList.add("contenedorImg");
+    imgGrande.classList.add("imgGaleria");
+
     imgGrande.src = img;
     //Cerramos GALERIA
     cerrar.addEventListener("click", () => {
         divImg.remove();  
     })
     
-    
-    divImg.appendChild(imgGrande);
-    divImg.appendChild(cerrar);
+    divContenedorImg.appendChild(imgGrande);
+    divContenedorImg.appendChild(cerrar);
+    divImg.appendChild(divContenedorImg);
     grupoImg.appendChild(divImg);
 }
 

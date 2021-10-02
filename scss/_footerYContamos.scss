@@ -88,6 +88,10 @@
 	bottom: -1rem
 }
 
+.seccionContamos{
+	padding-top: 5.2rem;
+}
+
 .seccionContamos:hover .tituloContamos:after{
 	width: 15rem;
 }
@@ -102,6 +106,25 @@
 	}
 	.tituloContamos:after{
 		width: 15rem;
+	}
+	.pImg{
+		padding: 1.5rem !important;
+	}
+}
+
+@media (max-width: 520px) {
+	.contamosSize{
+		width: 15rem;
+	}
+}
+
+@media (max-width: 320px) {
+	.pImg{
+		padding: 0 !important;
+	}
+	
+	.contamosSize{
+		width: 12.5rem;
 	}
 }
 
@@ -130,14 +153,4 @@
 			transform:translateX(0%);
 			width: 15rem;
 	}}
-}
-
-@media (min-width: 280px) {
-	.contamosSize{
-	width: 20px;
-	}
-}
-
-.contamosSize {
-	width: 50px;
 }
